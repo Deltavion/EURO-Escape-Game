@@ -21,6 +21,7 @@ class App:
                               justify="left")
         self.entry = Entry(self.root)
         self.send = Button(self.root,
+                           text="Enter",
                            command=self.writeNewLine
                            )
 
@@ -29,8 +30,6 @@ class App:
         self.prompt.grid(column=0, row=0, columnspan=2, sticky='nwse')
         self.entry.grid(column=0, row=1, sticky='nwse', padx=20, pady=15)
         self.send.grid(column=1, row=1,columnspan=2,  sticky='se', padx=15, pady=15, ipadx=50)
-
-        # .grid(row, column, rowspan, columnspan, sticky='wse', ipadx, ipady)
 
         # ==============================================================config
         self.root.grid_columnconfigure(index=0, weight=1)
